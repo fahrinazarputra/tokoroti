@@ -1,0 +1,92 @@
+html {
+    /* Agar ketika klik menu navigasi scroll halamannya halus */
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.p-100 {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.p-50 {
+    padding-left: 100px;
+}
+
+.navbar {
+    height: 96px;
+}
+
+#banner {
+    margin-top: 96px;
+    background: rgb(0, 0, 0);
+}
+
+#banner .carousel-item img {
+    height: 400px;
+    object-fit: cover;
+    opacity: .6;
+}
+
+/* Pemberian selector bertumpuk berkaitan dengan konsep overriding css */
+#banner .carousel-item .carousel-caption.d-none {
+    display: block !important;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+#q-menu .card {
+    height: 250px;
+    margin-top: 24px;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+#q-menu img {
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    object-fit: cover;
+}
+
+#q-menu .placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+
+#menu-section .carousel-item img {
+    height: 250px;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: 24px !important;
+}
+
+h3 {
+    font-size: 20px !important;
+}
+
+/* Ketika halaman berada atau lebih kecil dari ukuran yang ditetapkan gunakan css baru pada bagian yang ingin di override saja */
+@media(max-width: 991.20px) {
+    .p-50 {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media(max-width: 750px) {
+
+    .p-100,
+    .p-50 {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
