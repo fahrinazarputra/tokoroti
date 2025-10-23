@@ -2,6 +2,10 @@
 // index.php
 // Pastikan file data_menu.php ada di folder yang sama
 include 'data_menu.php';
+$upload_dir = "../uploads/";
+if (!is_dir($upload_dir)) {
+    mkdir($upload_dir, 0777, true);
+}
 // Variabel $minuman, $makanan, dan $ulasan harus sudah terisi data dari database.
 ?>
 <!DOCTYPE html>
@@ -169,8 +173,9 @@ include 'data_menu.php';
                             <?php else: ?>
                                 <?php foreach ($makanan as $index => $item): ?>
                                     <div class="carousel-item<?php echo $index === 0 ? 'active' : '' ?>">
-                                        <img src="assets/<?php echo htmlspecialchars($item['gambar']) ?>" class="d-block w-100"
-                                            alt="<?php echo htmlspecialchars($item['nama']) ?>">
+                                        <?php ?>
+                                        <img src="./uploads/<?php echo htmlspecialchars($item['gambar']); ?>" width="320" height="250">
+                                        <?php ?>
                                         <div class="carousel-caption d-none d-md-block">
                                             <h5><?php echo htmlspecialchars($item['nama']) ?></h5>
                                             <p>Rp. <?php echo number_format($item['harga'], 0, ',', '.') ?> -
