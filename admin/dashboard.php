@@ -7,7 +7,7 @@ $total_ulasan = $koneksi->query("SELECT COUNT(*) as total FROM ulasan")->fetch_a
 ?>
 
 <h1 class="h2">Dashboard</h1>
-<p>Selamat datang, **<?php echo htmlspecialchars($_SESSION['username']) ?>**.</p>
+<p>Selamat datang, <?php echo htmlspecialchars($_SESSION['username']) ?>.</p>
 <hr>
 
 <div class="row">

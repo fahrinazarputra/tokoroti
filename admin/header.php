@@ -64,6 +64,9 @@ if ($current_page != 'login.php' && !isset($_SESSION['user_logged_in'])) {
                             <li class="nav-item">
                                 <a class="nav-link" href="menu.php">Kelola Menu</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ulasan.php">Kelola Ulasan</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
